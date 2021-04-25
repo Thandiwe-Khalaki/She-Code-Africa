@@ -1,0 +1,19 @@
+e: python
+python:  
+  - "2.7"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - pytest Makefile/Makefile.py
+deploy:
+  provider: gcs
+  access_key_id: $ACCESSKEYID
+  secret_access_key: $SECRETACCESSKEY
+  region: "us-central-1"  
+  app: "django-tutorial"
+  env: "env1"
+  bucket_name: "pollsstorage"
+  on:
+    branch: master
