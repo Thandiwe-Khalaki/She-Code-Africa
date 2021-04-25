@@ -1,0 +1,6 @@
+nat.tfplan
+project.tfplan
+terraform.tfstate
+terraform.tfstate(copy)
+terraform.tfstate.backup
+terraform.tfvars
